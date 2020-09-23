@@ -27,7 +27,7 @@ for fspath in *; do
       echo '** Linking source files...'
       for p in lib bin; do
         pushd $p
-          tpath="$ROOT"/src/"$p"
+          tpath="$ROOT"/build/"$p"
           for f in "$tpath"/*; do
             ln -sfv "$f" "$(basename "$f")"
           done
